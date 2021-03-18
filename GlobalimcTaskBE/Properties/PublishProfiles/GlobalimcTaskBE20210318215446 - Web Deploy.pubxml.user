@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+This file is used by the publish/package process of your Web project. You can customize the behavior of this process
+by editing this MSBuild file. In order to learn more about this please visit https://go.microsoft.com/fwlink/?LinkID=208121. 
+-->
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <TimeStampOfAssociatedLegacyPublishXmlFile />
+    <EncryptedPassword>AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAAnUzDLx4heUifreCXX77dAAAAAAACAAAAAAAQZgAAAAEAACAAAAAB0SrCijNH7UnslxN6VWIBjdNBCodjYmHQ3CSURHtVvAAAAAAOgAAAAAIAACAAAAAH2rIuQxl411+WCNfDgokTaj4SfXtfa8LgWRSTYkRAhYAAAABGDXwSXtt0Tr4zm6FkWx3AS8oVkcBHsW2bSIkxySEAxyrJKdP1hDm7l4x0jCCdnG4/q08fnqOUif0VAbcbUpNLHzTHQVvRXhd8VsQWx5MuBaEb4kAlVS4r85ZkthLAS3oJntRogUQCp6qCmW/AJZ8zH2hjbUVVttyoa0tg2+H+VEAAAAAYcN/ICPfq96rJvPdIlfyZAVa0KVyP/jM/CoxX35iI0OLKg1VBuSlq/kmc8ksNkGMKSXvBALEHCETmLuJldTCb</EncryptedPassword>
+    <History>True|2021-03-18T20:45:49.7622226Z;True|2021-03-18T22:21:06.3238660+02:00;True|2021-03-18T22:18:53.3742772+02:00;True|2021-03-18T22:17:44.9243929+02:00;True|2021-03-18T22:07:57.6276331+02:00;True|2021-03-18T22:03:32.6177887+02:00;True|2021-03-18T22:01:09.9631566+02:00;</History>
+  </PropertyGroup>
+  <ItemGroup>
+    <DestinationConnectionStrings Include="MyDbConnection">
+      <Value>Data Source=tcp:globalimctaskbedbserver.database.windows.net,1433%3bInitial Catalog=GlobalimcTaskBE_db%3bUser Id=dbuser%40globalimctaskbedbserver%3bPassword=p%40ssw0rd</Value>
+    </DestinationConnectionStrings>
+  </ItemGroup>
+  <ItemGroup>
+    <EFMigrations Include="GlobalimcTaskBE.Data.GlobalImcDatabaseContext">
+      <Value>Data Source=tcp:globalimctaskbedbserver.database.windows.net,1433%3bInitial Catalog=GlobalimcTaskBE_db%3bUser Id=dbuser%40globalimctaskbedbserver%3bPassword=p%40ssw0rd</Value>
+    </EFMigrations>
+  </ItemGroup>
+</Project>

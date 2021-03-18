@@ -1,0 +1,108 @@
+<div style="width: 500px; margin: auto;">
+    <div *ngIf="currentProduct && !message" class="edit-form">
+      <h4>Product</h4>
+      <form>
+        <div class="form-group">
+          <label for="vendorId">Vendor Id</label>
+          <input
+            type="text"
+            class="form-control"
+            id="vendorId"
+            required
+            [(ngModel)]="currentProduct.VendorId"
+            name="vendorId"
+          />
+        </div>
+        <div class="form-group">
+          <label for="title">Title</label>
+          <input
+            type="text"
+            class="form-control"
+            id="title"
+            required
+            [(ngModel)]="currentProduct.Title"
+            name="title"
+          />
+        </div>
+  
+        <div class="form-group">
+          <label for="description">Description</label>
+          <input
+            class="form-control"
+            id="description"
+            required
+            [(ngModel)]="currentProduct.Description"
+            name="description"
+          />
+        </div>
+        <div class="form-group">
+          <label for="price">Price</label>
+          <input
+            type="number"
+            class="form-control"
+            id="price"
+            required
+            [(ngModel)]="currentProduct.Price"
+            name="price"
+          />
+        </div>
+        <div class="form-group">
+          <label for="image">Image</label>
+          <img
+            id="image"
+            src="{{img}}"
+            name="image"
+          />
+        </div>
+        <div class="form-group">
+          <label for="dietaryFlag">Dietary Flag</label>
+          <select  class="form-control"
+          id="dietaryFlag"
+          required
+          [(ngModel)]="currentProduct.DietaryFlag"
+          name="dietaryFlag">
+            <option value="0">Vegan</option>
+            <option value="1">Lactose Free</option>
+          </select>
+         
+        </div>
+        <div class="form-group">
+          <label for="viewsCount">Views Count</label>
+          <input
+            type="number"
+            class="form-control"
+            id="viewsCount"
+            required
+            [(ngModel)]="currentProduct.ViewsCount"
+            name="viewsCount"
+          />
+        </div>
+      </form>
+  
+     
+  
+      <button class="badge badge-danger mr-2" (click)="deleteProduct()">
+        Delete
+      </button>
+  
+      <button
+        type="submit"
+        class="badge badge-success"
+        (click)="updateProduct()"
+      >
+        Update
+      </button>
+      <p></p>
+    </div>
+  
+    <div *ngIf="!currentProduct">
+      <br />
+      <p>This product is not accessible</p>
+    </div>
+    <div *ngIf="message">
+      <h3>You successfully updated a product!</h3>
+      <a class="badge badge-warning" routerLink="/products/">
+        Back
+      </a>
+    </div>
+  </div>

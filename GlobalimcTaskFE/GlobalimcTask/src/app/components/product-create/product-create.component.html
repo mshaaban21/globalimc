@@ -1,0 +1,91 @@
+<div style="width: 500px; margin: auto;">
+    <div class="submit-form" [formGroup]="create_form">
+      <div *ngIf="!submitted">
+        <div class="form-group">
+          <label for="VendorId">Vendor Id</label>
+          <input
+            type="text"
+            class="form-control"
+            id="VendorId"
+            required="true"
+            name="VendorId"
+            formControlName="VendorId"
+          />
+          <span class="text-danger" *ngIf="create_form.controls['VendorId'].hasError('required') && (create_form.controls['VendorId'].dirty || create_form.controls['VendorId'].touched)">This field is required</span>
+        </div>
+        <div class="form-group">
+          <label for="Title">Title</label>
+          <input
+            type="text"
+            class="form-control"
+            id="Title"
+            required
+            formControlName="Title"
+            name="Title"
+          />
+          <span class="text-danger" *ngIf="create_form.controls['Title'].hasError('required') && (create_form.controls['Title'].dirty || create_form.controls['Title'].touched)">This field is required</span>
+        </div>
+  
+        <div class="form-group">
+          <label for="Description">Description</label>
+          <input
+            class="form-control"
+            id="Description"
+            required
+            formControlName="Description"
+            name="Description"
+          />
+          <span class="text-danger" *ngIf="create_form.controls['Description'].hasError('required') && (create_form.controls['Description'].dirty || create_form.controls['Description'].touched)">This field is required</span>
+        </div>
+        <div class="form-group">
+          <label for="Price">Price</label>
+
+          <input
+           decimals="2"
+            min="0"
+            type="number"
+            class="form-control"
+            id="Price"
+            required
+            formControlName="Price"
+            name="Price"
+          />
+          <span class="text-danger" *ngIf="create_form.controls['Price'].hasError('required') && (create_form.controls['Price'].dirty || create_form.controls['Price'].touched)">This field is required</span>
+        </div>
+        <div class="form-group">
+          <label for="image">Image</label>
+          <app-upload (onUploadFinished)="uploadFinished($event)"></app-upload>
+        </div>
+        <div class="form-group">
+          <label for="DietaryFlag">Dietary Flag</label>
+          <select  class="form-control"
+          id="DietaryFlag"
+          required
+          formControlName="DietaryFlag"
+          name="DietaryFlag">
+            <option value="0">Vegan</option>
+            <option value="1">Lactose Free</option>
+          </select>
+          <span class="text-danger" *ngIf="create_form.controls['DietaryFlag'].hasError('required') && (create_form.controls['DietaryFlag'].dirty || create_form.controls['DietaryFlag'].touched)">This field is required</span>
+        </div>
+        <div class="form-group">
+          <label for="ViewsCount">Views Count</label>
+          <input
+            type="number"
+            class="form-control"
+            id="ViewsCount"
+            required
+            formControlName="ViewsCount"
+            name="ViewsCount"
+          />
+          <span class="text-danger" *ngIf="create_form.controls['ViewsCount'].hasError('required') && (create_form.controls['ViewsCount'].dirty || create_form.controls['ViewsCount'].touched)">This field is required</span>
+        </div>
+        <button (click)="createProduct()"  class="btn btn-success">Create</button>
+      </div>
+  
+      <div *ngIf="submitted">
+        <h3>You successfully created a product!</h3>
+        <button class="btn btn-success" (click)="newProduct()">New..</button>
+      </div>
+    </div>
+  </div>

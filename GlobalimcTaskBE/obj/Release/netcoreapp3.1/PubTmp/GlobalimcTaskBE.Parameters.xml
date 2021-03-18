@@ -1,0 +1,9 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<parameters>
+  <parameter name="IIS Web Application Name" description="" value="GlobalimcTaskBE20210318215446" tags="IisApp">
+    <parameterEntry kind="ProviderPath" scope="IisApp" match="^C:\\Users\\mazzica1\\source\\repos\\GlobalimcTask\\GlobalimcTaskBE\\obj\\Release\\netcoreapp3\.1\\PubTmp\\Out\\$" />
+  </parameter>
+  <parameter name="GlobalimcTaskBE.Data.GlobalImcDatabaseContext" description="" value="Data Source=tcp:globalimctaskbedbserver.database.windows.net,1433;Initial Catalog=GlobalimcTaskBE_db;User Id=dbuser@globalimctaskbedbserver;Password=p@ssw0rd" tags="dbfullsql">
+    <parameterEntry kind="ProviderPath" scope="dbfullsql" match="^C:\\Users\\mazzica1\\source\\repos\\GlobalimcTask\\GlobalimcTaskBE\\obj\\Release\\netcoreapp3\.1\\PubTmp\\EFSQLScripts\\GlobalimcTaskBE\.Data\.GlobalImcDatabaseContext\.sql$" />
+  </parameter>
+</parameters>
